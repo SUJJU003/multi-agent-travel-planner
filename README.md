@@ -10,6 +10,17 @@ A comprehensive travel planning system built with Agent2Agent (A2A) protocol, fe
 - **Currency Agent** (LangGraph + OpenAI) - Currency conversion and exchange rates on port 10004
 - **Streamlit UI** - User-friendly web interface
 
+## Demo
+
+
+
+
+https://github.com/user-attachments/assets/bed67da1-eb3a-4317-99d5-045bdb035b73
+
+
+
+
+
 ## 🚀 Quick Start
 
 ### 1. Environment Setup
