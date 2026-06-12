@@ -1,25 +1,64 @@
 # 🌍 Multi-Agent Travel Planning System
 
-A comprehensive travel planning system built with Agent2Agent (A2A) protocol, featuring specialized AI agents for hotel booking, car rentals, currency conversion, and travel coordination.
+A multi-agent AI travel planning application built with Streamlit, FastAPI, CrewAI, LangGraph, and Groq.
+
 
 ## 🏗️ System Architecture
 
-- **Travel Planner Agent** (Google ADK + A2A Protocol) - Master coordinator on port 10001
-- **Hotel Booking Agent** (CrewAI + OpenAI) - Hotel search and booking on port 10002  
-- **Car Rental Agent** (LangGraph + OpenAI) - Car rental options on port 10003
-- **Currency Agent** (LangGraph + OpenAI) - Currency conversion and exchange rates on port 10004
-- **Streamlit UI** - User-friendly web interface
-
-## Demo
-
+- Travel Planner UI (Streamlit)
+- Hotel Booking Agent (CrewAI)
+- Car Rental Agent (LangGraph)
+- Currency Agent (LangGraph)
+- Groq Llama 3.3 70B Integration
+- FastAPI Agent Services
 
 
+## Project Status
 
-https://github.com/user-attachments/assets/bed67da1-eb3a-4317-99d5-045bdb035b73
+Current Progress:
+
+✅ Streamlit interface operational
+
+✅ Hotel Agent running
+
+✅ Car Rental Agent running
+
+✅ Currency Agent running
+
+✅ Travel itinerary generation working
+
+✅ GitHub deployment completed
+
+⚠ Live hotel booking APIs not integrated
+
+⚠ Live car rental APIs not integrated
+
+⚠ Real-time travel data improvements needed
 
 
+## Improvements Made
+
+- Replaced Gemini integration with Groq
+- Fixed dependency issues
+- Configured FastAPI agent services
+- Connected Streamlit frontend with backend agents
+- Resolved environment setup problems
+- Added local multi-agent execution workflow
 
 
+## 📷 screenshots
+
+### Dashboard
+
+![Dashboard](<img width="1920" height="1080" alt="dashboard" src="https://github.com/user-attachments/assets/ad89751f-94bc-4838-8130-5da911e517a8" />
+)
+
+### Generated Travel Plan
+
+![Travel Plan](<img width="1493" height="792" alt="image" src="https://github.com/user-attachments/assets/c5cee063-dcd8-489e-a00f-8403312b3a06" />
+)
+![Travel Plan](<img width="1570" height="775" alt="image" src="https://github.com/user-attachments/assets/7d24a340-d9c7-4a0e-8804-ca7cd6633a43" />
+)
 
 ## 🚀 Quick Start
 
@@ -47,11 +86,21 @@ uv venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
 
+for windows
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r streamlit_requirements.txt
+
 # Car Rental Agent  
 cd ../car_rental_agent_langgraph
 uv venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
+
+for windows
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r streamlit_requirements.txt
 
 # Travel Planner Agent
 cd ../travel_planner_agent_adk
@@ -59,17 +108,32 @@ uv venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
 
+for windows
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r streamlit_requirements.txt
+
 # Currency Agent
 cd ../currency_agent_langhraph
 uv venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
 
+for windows
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r streamlit_requirements.txt
+
 # Streamlit UI (global environment)
 cd ..
 uv venv
 source .venv/bin/activate
 uv pip install -r streamlit_requirements.txt
+
+for windows
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r streamlit_requirements.txt
 ```
 
 ### 3. Start All Agents
