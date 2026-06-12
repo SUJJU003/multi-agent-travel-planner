@@ -10,7 +10,7 @@ import json
 import requests
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 import re
 
 # Load environment variables
@@ -21,12 +21,15 @@ class TravelPlannerApp:
     
     def __init__(self):
         """Initialize the travel planner app."""
-        openai_key = os.getenv("OPENAI_API_KEY")
-        if not openai_key:
-            st.error("OPENAI_API_KEY not found in environment variables")
+        groq_key = os.getenv("GROQ_API_KEY")
+        if not groq_key:
+            st.error("GROQ_API_KEY not found in environment variables")
             st.stop()
-        
-        self.llm = ChatOpenAI(model="gpt-4o", api_key=openai_key)
+
+        self.llm = ChatGroq(
+            model="llama-3.3-70b-versatile",
+            api_key=groq_key
+        )
         
         # Agent endpoints
         self.hotel_agent_url = "http://localhost:10002"

@@ -151,11 +151,15 @@ class HotelBookingAgent:
 
     def __init__(self):
         """Initializes the HotelBookingAgent."""
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-        if os.getenv("OPENAI_API_KEY"):
-            self.llm = LLM(model="openai/gpt-4o", api_key=openai_api_key)
+        google_api_key = os.getenv("GOOGLE_API_KEY")
+
+        if os.getenv("GOOGLE_API_KEY"):
+            self.llm = LLM(
+                model="gemini/gemini-2.0-flash",
+                api_key=google_api_key
+            )
         else:
-            raise ValueError("OPENAI_API_KEY environment variable not set.")
+            raise ValueError("GOOGLE_API_KEY environment variable not set.")
 
         self.hotel_booking_assistant = Agent(
             role="Hotel Booking Specialist",
